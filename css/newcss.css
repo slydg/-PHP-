@@ -1,0 +1,444 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-10-14, 22:36:17
+    Author     : sorro
+*/
+/* ===================================================================
+ *  01. webfonts and iconfonts - (_document-setup.scss)
+ *
+ * ------------------------------------------------------------------- */
+@import url("font-awesome/css/font-awesome.min.css");
+@import url("micons/micons.css");
+@import url("fonts.css");
+
+
+/* ===================================================================
+ *  02. base style overrides - (_document-setup.scss)
+ *
+ * ------------------------------------------------------------------- */
+html {
+    font-size: 10px;
+}
+
+@media only screen and (max-width:1024px) {
+    html {
+        font-size: 9.411764705882353px;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width:400px) {
+    html {
+        font-size: 9.411764705882353px;
+    }
+
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: "roboto-regular", sans-serif;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: #111111;
+}
+
+a,
+a:visited {
+    color: #1237B1;
+    border-bottom: 1px solid transparent;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    color: #000000;
+    border-color: rgba(21, 21, 21, 0.2);
+}
+
+
+
+/* ------------------------------------------------------------------- 
+ * main navigation - (_layout.css) 
+ * ------------------------------------------------------------------- */
+#main-nav-wrap {
+    display: table;
+    float: right;
+    padding-right: 85px;
+    font-family: "montserrat-regular", sans-serif;
+    font-size: 15px;
+    height: 78px;
+}
+
+.main-navigation {
+    display: table-cell;
+    vertical-align: middle;
+    list-style: none;
+}
+
+.main-navigation li {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-right: 22px;
+    padding: 0;
+}
+
+.main-navigation li:last-child {
+    margin-right: 0;
+}
+
+.main-navigation li a {
+    display: block;
+    padding-bottom: 9px;
+    color: #898989;
+    border: none;
+}
+
+.main-navigation li a:hover {
+    color: #000000;
+}
+
+.main-navigation li > a {
+    border-bottom: 2px solid transparent;
+}
+
+.main-navigation li.current > a {
+    border-bottom: 2px solid #151515;
+    color: #000000;
+    font-family: "montserrat-bold", sans-serif;
+}
+
+.main-navigation ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    background: #f4f4f4;
+    border-radius: 0 0 3px 3px;
+    font-size: 11px;
+    z-index: 500;
+    display: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.main-navigation ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    left: calc(100% + 1px);
+    border-radius: 0 3px 3px 3px;
+}
+
+.main-navigation ul li {
+    display: block;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    min-height: 48px;
+    width: 100%;
+}
+
+.main-navigation ul li:last-child {
+    border: none;
+}
+
+.main-navigation ul li a {
+    white-space: nowrap;
+    padding: 16.5px 25px;
+    font-family: "muli-regular", sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+    display: block;
+    color: #8E8E8E;
+}
+
+.main-navigation ul li a:hover {
+    background: transparent;
+    color: #000000;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.sfHover > ul {
+    display: block;
+}
+/* ===================================================================
+ *  09. header styles - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+header {
+    width: 100%;
+    background: #DBDBDB url(../images/escheresque_@2X.png) repeat;
+    background-size: 46px 29px;
+    height: 130px;
+    border-bottom: 1px solid #E5E5E5;
+}
+header .header-content {
+    height: auto;
+    max-width: 1290px;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+header a {
+    border: none;
+}
+
+@media only screen and (max-width:400px) {
+    header {
+        height: 118px;
+    }
+
+}
+/* -------------------------------------------------------------------
+ * main navigation - mobile view
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width:768px) {
+    .triggers {
+        z-index: 601;
+    }
+
+    .triggers .menu-toggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+
+    .triggers .search-trigger {
+        position: absolute;
+        top: 50%;
+        right: 45px;
+        font-size: 21px;
+        margin-top: 5px;
+        display: block;
+        height: 3rem;
+        line-height: 3rem;
+        width: 2.6rem;
+        text-align: left;
+    }
+
+    #main-nav-wrap {
+        display: block;
+        width: 100%;
+        float: none;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: -24px;
+        right: 0;
+        z-index: 600;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 24px;
+        height: 3px;
+        margin-top: -1.5px;
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        bottom: auto;
+        left: auto;
+        background-color: black;
+        -moz-transition: background 0.2s ease-in-out;
+        -o-transition: background 0.2s ease-in-out;
+        -webkit-transition: background 0.2s ease-in-out;
+        -ms-transition: background 0.2s ease-in-out;
+        transition: background 0.2s ease-in-out;
+        font: 0/0 a;
+        text-shadow: none;
+        color: transparent;
+    }
+
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: inherit;
+        left: 0;
+        -moz-transition-duration: 0.2s, 0.2s;
+        -o-transition-duration: 0.2s, 0.2s;
+        -webkit-transition-duration: 0.2s, 0.2s;
+        -ms-transition-duration: 0.2s, 0.2s;
+        transition-duration: 0.2s, 0.2s;
+        -moz-transition-delay: 0.2s, 0s;
+        -o-transition-delay: 0.2s, 0s;
+        -webkit-transition-delay: 0.2s, 0s;
+        -ms-transition-delay: 0.2s, 0s;
+        transition-delay: 0.2s, 0s;
+    }
+
+    .menu-toggle span::before {
+        top: -8px;
+        -moz-transition-property: top, transform;
+        -o-transition-property: top, transform;
+        -webkit-transition-property: top, transform;
+        -ms-transition-property: top, transform;
+        transition-property: top, transform;
+    }
+
+    .menu-toggle span::after {
+        bottom: -8px;
+        -moz-transition-property: bottom, transform;
+        -o-transition-property: bottom, transform;
+        -webkit-transition-property: bottom, transform;
+        -ms-transition-property: bottom, transform;
+        transition-property: bottom, transform;
+    }
+
+    .menu-toggle.is-clicked span {
+        background-color: transparent;
+    }
+
+    .menu-toggle.is-clicked span::before,
+    .menu-toggle.is-clicked span::after {
+        background-color: black;
+        -moz-transition-delay: 0s, 0.2s;
+        -o-transition-delay: 0s, 0.2s;
+        -webkit-transition-delay: 0s, 0.2s;
+        -ms-transition-delay: 0s, 0.2s;
+        transition-delay: 0s, 0.2s;
+    }
+
+    .menu-toggle.is-clicked span::before {
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle.is-clicked span::after {
+        bottom: 0;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .main-navigation {
+        display: none;
+        background: #FFFFFF;
+        padding: 132px 45px 54px 45px;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        clear: both;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    .main-navigation li {
+        float: none;
+    }
+
+    .main-navigation > li {
+        display: block;
+        text-align: left;
+        margin-right: 0;
+        border: none;
+        min-height: 60px;
+    }
+
+    .main-navigation li a {
+        display: block;
+        width: auto;
+        color: #848484;
+        padding: 18px 0;
+        line-height: 24px;
+        border: none;
+    }
+
+    .main-navigation li a:hover {
+        color: #000000;
+        border: none;
+    }
+
+    .main-navigation li.current > a {
+        color: #000000;
+        border: none;
+    }
+
+    .main-navigation li.has-children a {
+        position: relative;
+    }
+
+    .main-navigation li.has-children > a:after {
+        content: "\f067";
+        display: inline;
+        padding-left: 10px;
+        color: #000000;
+        font-family: "fontAwesome";
+        font-size: 12px;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        margin-top: -10px;
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 50%;
+        background: none;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .main-navigation li.has-children:hover > a:after {
+        content: "\f068";
+    }
+
+    .main-navigation li.has-children ul {
+        position: static;
+        background: #FFFFFF;
+        box-shadow: none;
+        margin-top: -6px;
+    }
+
+    .main-navigation li.has-children ul ul {
+        margin-bottom: 0;
+    }
+
+    .main-navigation li.has-children li {
+        border: none;
+        padding-left: 12px;
+        margin: 0;
+        padding-left: 12px;
+        min-height: 48px;
+    }
+
+    .main-navigation li.has-children li a {
+        padding: 18px 25px 18px 0;
+    }
+
+    .main-navigation li.has-children li::last-child {
+        margin-bottom: 18px;
+    }
+
+}

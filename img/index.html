@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- mobile specific metas
+        ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="renderer" content="webkit">
+        <meta name="keywords" content="交易平台主页框架">
+        <meta name="description" content="交易平台主页框架">
+        <meta name="robots" content="all">
+        <meta name="HandheldFriendly" content="true">
+        <!-- CSS
+================================================== -->
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/vendor.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/login.css">
+        <link href="css/jquery.Jcrop.min.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.Jcrop.min.js"></script>
+        <script src="js/script.js"></script>
+        <title>修改头像</title>
+    </head>
+    <body>
+        <header class="short-header">
+
+            <div class="gradient-block"></div>
+            <div class="row header-content">
+
+                <div class="logo">
+                    <a href="../index.php">Author</a>
+                </div>
+
+                <nav id="main-nav-wrap">
+                    <ul class="main-navigation sf-menu">
+                        <li>
+                            <a href="../index.php" title="">首页</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="../category.php" title="">商品</a>
+                            <ul class="sub-menu">
+                                <li><a href="../category.php?class=elec">电子设备</a></li>
+                                <li><a href="../category.php?class=daily">日用品</a></li>
+                                <li><a href="../category.php?class=book">书籍</a></li>
+                                <li><a href="../category.php?class=ornament">饰品</a></li>
+                                <li><a href="../category.php?class=play">玩具</a></li>
+                                <li><a href="../category.php?class=other">其他</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="single-standard.html" title="">阅读</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="single-video.html">文章列表</a>
+                                </li>
+                                <li>
+                                    <a href="single-audio.html">使用指南</a>
+                                </li>
+                                <li>
+                                    <a href="single-gallery.html">关于我们</a>
+                                </li>
+                                <li>
+                                    <a href="single-standard.html">发表文章</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="current">
+                            <a href="indiv.php" title="">用户信息</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="../jy.html" title="">我的交易</a>
+                            <ul class="sub-menu ">
+                                <li><a href="../upload.html">上传商品</a></li>
+                                <li><a href="">我的关注</a></li>
+                                <li><a href="">交易中</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../contact.html" title="">联系我们</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- end main-nav-wrap -->
+                <div class="search-wrap">
+                    <form role="search" method="get" class="search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="search-submit" value="Search">
+                    </form>
+
+                    <a href="#" id="close-search" class="close-btn">Close</a>
+
+                </div>
+                <!-- end search wrap -->
+
+                <div class="triggers">
+                    <a class="search-trigger" href="#">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a class="menu-toggle" href="#">
+                        <span>Menu</span>
+                    </a>
+                </div>
+                <!-- end triggers -->
+
+            </div>
+        </header>
+        <!-- end header -->
+
+        <section id="page-header">
+            <div class="row current-cat">
+                <div class="col-full">
+                    <h1>更换头像</h1>
+                </div>   		
+            </div>
+        </section>
+
+        <section id="content-wrap" class="blog-single">
+            <div class="row">
+                <div class="col-twelve">
+                    <article class="format-standard">
+
+
+                        <div class="bbody">
+                            <!-- upload form -->
+                            <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php" onSubmit="return checkForm()">
+                                <!-- hidden crop params -->
+                                <input type="hidden" id="x1" name="x1" />
+                                <input type="hidden" id="y1" name="y1" />
+                                <input type="hidden" id="x2" name="x2" />
+                                <input type="hidden" id="y2" name="y2" />
+
+                                <div id="choose_face">
+                                    <a href="javascript:;" id="upload2">点击选择照片<input type="file" name="image_file" id="image_file" onChange="fileSelectHandler()" /></a>
+                                </div>
+                                <div class="error"></div>
+                                <div class="step2">
+
+                                    <img id="preview"/>
+                                    <div class="info">
+                                        <input type="hidden" id="filesize" name="filesize" />
+                                        <input type="hidden" id="filetype" name="filetype" />
+                                        <input type="hidden" id="filedim" name="filedim" />
+                                        <input type="hidden" id="w" name="w" />
+                                        <input type="hidden" id="h" name="h" />
+                                    </div>
+                                    <br>
+                                    <input type="submit" value="Upload" />
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </article>
+                </div>
+                <!-- end col-twelve -->
+            </div>
+            <!-- end row -->
+        </section>
+        <!-- end content -->
+
+
+        <div id="preloader">
+            <div id="loader"></div>
+        </div>
+
+        <!-- Java Script
+   ================================================== -->
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+
+
+    </body>
+</html>
+
+

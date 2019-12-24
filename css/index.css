@@ -1,0 +1,83 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-10-15, 1:09:44
+    Author     : sorro
+*/
+
+#log{
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    top:0px;
+    left: 110px;
+    font-size: 15px;
+}
+#log a{
+    display: block;
+    color:#999999;
+}
+
+#log a:hover{
+    color: #000;
+}
+.inside1{
+    padding: 1.8rem 2.8rem 3.6rem;
+    height: 400px;
+    background-color: rgba(0,0,0,0);
+}
+.inside{
+    padding: 1.8rem 2.8rem 3.6rem;
+    height: 300px;
+    background-color: rgba(0,0,0,0);
+}
+#upload1,#upload2,#upload3 {
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    text-decoration: none;
+    padding: 10px;
+
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+
+}
+#img1,#img2,#img3{
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+#upload1:hover,#upload2:hover,#upload3:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+#image_file{
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}

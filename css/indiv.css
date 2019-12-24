@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-10-17, 8:30:39
+    Author     : sorro
+*/
+#information{
+    position: fixed;
+    width: 700px;
+    left: 50%;
+    top: 15%;
+    margin-left: -350px;
+    background: rgba(255,255,255,.3);
+    padding: 25px 15px 25px 10px;
+    font: 15px Georgia, "Microsoft YaHei";
+    color: #fff;
+    border-radius:5%;
+}
+
+#infortable{
+    font: 15px Georgia, "Microsoft YaHei";
+    font-size: 1.2em;
+    text-align: center;
+    width:  95%;   
+    position: relative;
+    font-weight: normal;
+    margin: auto;
+    top: 0;left: 0;right: 0;bottom: 0;
+}
+
+/*#gerendiv{
+    position: absolute;
+    top:150px;
+    width:450px;
+    right: 35%
+}*/
+
+#fac img{
+    border: 10px solid #fff;
+    border-radius: 50%;
+
+}
+
+#face{
+    width: 15rem;
+    height: 15rem;
+    
+    border:10px solid #fff;
+    border-radius: 50%; 
+}
+#facea{
+    transform: translate(25%,40%);
+
+}
+#fac,#address,#content,#need{
+    padding: 1.8rem 2.8rem 3.6rem;
+    height: 500px;
+    background-color: rgba(0,0,0,0);
+}
